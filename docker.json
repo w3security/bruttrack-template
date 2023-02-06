@@ -58,30 +58,4 @@
         }
       ]
     }
-    {
-      "type": 1,
-      "title": "Snibox",
-      "name": "Snibox",
-      "description": "Self-hosted snippet manager.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
-      "image": "snowmean/snibox-sqlite:latest",
-      "categories": [
-        "Other",
-        "Tools"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        {
-          "WebUI": "3010:3000/tcp"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/app/db/database",
-          "bind": "!config/Snibox"
-        }
-      ],
-      "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
-    }
 ]
