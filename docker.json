@@ -59,35 +59,29 @@
       ]
     }
     {
-    "type": 1,
-    "title": "bruttrack",
-    "name": "bruttrack",
-    "description": "A list of useful payloads and bypasses for Web Application Security. Feel free to improve with your payloads and techniques.",
-    "logo": "https://raw.githubusercontent.com/w3security/Bruttrack/main/121343021.jpg",
-    "image": "w3security/bruttrack",
-    "catagories": [
-      "Tools",
-      "Payloads"
-    ],
-    "platform": "kalilinux",
-    "restart_policy": "unless_stopped",
-    "volumes": [
-      {
-        "container": "/config",
-        "bind": "!config/bruttrack"
-      }
-    ],
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "!PUID"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "!PGID"
-      }
-    ]
-  }
+      "type": 1,
+      "title": "Snibox",
+      "name": "Snibox",
+      "description": "Self-hosted snippet manager.",
+      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
+      "image": "snowmean/snibox-sqlite:latest",
+      "categories": [
+        "Other",
+        "Tools"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        {
+          "WebUI": "3010:3000/tcp"
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/app/db/database",
+          "bind": "!config/Snibox"
+        }
+      ],
+      "note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text."
+    }
 ]
